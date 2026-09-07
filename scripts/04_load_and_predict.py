@@ -1,4 +1,3 @@
-import mlflow
 import pandas as pd
 from sklearn.datasets import load_breast_cancer
 from sklearn.ensemble import RandomForestClassifier
@@ -29,7 +28,7 @@ def load_and_predict():
         pred_label = target_names[int(predictions[i])]
         true_label = target_names[int(y_true[i])]
         is_correct = "Correct" if predictions[i] == y_true[i] else "Incorrect"
-        print(f"True: {true_label} ^| Predicted: {pred_label} ^| Result: {is_correct}".replace("^|", "^|"))
+        print(f"True: {true_label} ^| Predicted: {pred_label} ^| Result: {is_correct}")
 
 if __name__ == "__main__":
     load_and_predict()
